@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="dominio/dominio.csproj" />
+  <Project Path="negocio/negocio.csproj" />
   <Project Path="WebApplication/WebApplication.csproj" />
 </Solution>

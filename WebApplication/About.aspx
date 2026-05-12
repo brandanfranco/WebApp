@@ -5,5 +5,19 @@
         <h2 id="title"><%: Title %>.</h2>
         <h3>Your application description page.</h3>
         <p>Use this area to provide additional information.</p>
+        <asp:GridView ID="gvArticulos" runat="server" CssClass="table" AutoGenerateColumns="false">
+
+            <Columns>
+                <asp:BoundField Headertext="Nombre" Datafield="Nombre" />
+                <asp:BoundField Headertext="Descripcion" Datafield="Descripcion" />
+                <asp:BoundField Headertext="Precio" Datafield="Precio" />
+
+            </Columns>
+                
+
+
+
+        </asp:GridView>
+
     </main>
 </asp:Content>

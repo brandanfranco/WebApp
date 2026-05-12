@@ -22,15 +22,17 @@ namespace negocio
             //string select = "SELECT A.Id, Codigo, Nombre, A.Descripcion, M.Id marcID, M.Descripcion marcDesc, C.Id catID, C.Descripcion catDesc, Precio, I.Id imgID, I.ImagenUrl imgUrl";
             //string from = " FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES AS I ON I.IdArticulo = A.Id";
 
-            string select = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Id AS marcID, M.Descripcion AS marcDesc, C.Id AS catID, C.Descripcion AS catDesc, A.Precio, I.ImagenUrl";
-            string from = " FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON I.Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = A.Id ORDER BY Id)";
+            //string select = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Id AS marcID, M.Descripcion AS marcDesc, C.Id AS catID, C.Descripcion AS catDesc, A.Precio, I.ImagenUrl";
+            //string from = " FROM ARTICULOS A INNER JOIN MARCAS M ON A.IdMarca = M.Id INNER JOIN CATEGORIAS C ON A.IdCategoria = C.Id LEFT JOIN IMAGENES I ON I.Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = A.Id ORDER BY Id)";
 
 
-            string consulta = select + from;
+            //string consulta = select + from;
 
             try
             {
-                data.setQuery(consulta);
+                //data.setQuery(consulta);
+
+                data.setProcedure("storedListar");
                 data.lecturaDatos();
 
                 while (data.Lector.Read())

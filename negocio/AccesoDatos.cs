@@ -32,6 +32,12 @@ namespace datos
             comando.CommandText = query;
         }
 
+        public void setProcedure(string procedure)
+        {
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+            comando.CommandText = procedure;
+        }
+
 
         public void lecturaDatos()
         {
